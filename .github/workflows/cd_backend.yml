@@ -1,11 +1,11 @@
 name: Continuous Deployment (Prod) (Backend)
 on:
+  runs:
+    using: "node24"
   push:
     branches: [main]
 jobs:
   build:
-    runs:
-      using: 'node24'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
